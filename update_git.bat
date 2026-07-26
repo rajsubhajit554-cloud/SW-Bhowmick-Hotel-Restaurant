@@ -1,19 +1,16 @@
 @echo off
 echo =========================================
-echo    SW Bhowmick Hotel & Restaurant
+echo    SW Bhowmick Hotel ^& Restaurant
 echo       Git Auto Update Tool
 echo =========================================
 echo.
 
-git status
+echo Staging all changes...
+git add .
 
 echo.
 set /p commit_msg="Enter commit message (or press ENTER for default): "
-if "%commit_msg%"=="" set commit_msg="Updated website files and assets"
-
-echo.
-echo Adding files to git...
-git add .
+if "%commit_msg%"=="" set commit_msg=Updated website files and assets
 
 echo.
 echo Committing changes...
